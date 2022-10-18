@@ -138,7 +138,7 @@ a:active, a:focus{
   transition: transform 0.942s ease-out;
 }
 
-.hover-highlight-animation:active:after {
+.hover-highlight-animation:enabled:after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
@@ -152,6 +152,152 @@ a:active, a:focus{
     width: 70px;
     height: 74px;
 }
+
+
+//:enabled
+.enabled > div {
+    text-align: center;    
+    &.flex-ctnr > div {
+        flex: 1 1 auto;
+        margin: 0 1%;
+        padding-bottom: 30px;
+        position: relative;
+    }
+    *[disabled] { opacity: .2; }
+    .control {
+        display: flex;
+        flex-basis: 150px;
+        align-self: center;
+        align-items: center;
+        height: 0;
+        padding: 50px 10px;
+        border: #333 1px solid;
+        border-radius: 5px;
+        background: linear-gradient($g,darken($g,20) 90%);
+        &:hover {
+            border-color: #666;
+            background: darken($g,20);
+        }
+        h4 { margin: 0; }
+        .toggle { display: none; }
+    }
+}
+
+/** Rotating status bars **/
+
+/*Variables*/
+$status-bar-width: 100%;
+$status-bar-height: 30px;
+
+/* Container box to set the sides relative to */
+.status-bar {
+    width: $status-bar-width;
+    height: $status-bar-height;    
+    transition: all .2s ease;
+    transform-style: preserve-3d;
+    /* The lower the number the more pronounced the perspective */
+    perspective: 20000px;
+    /* Rotate the status bar */
+    &:hover { transform: rotateX(-89deg); }
+    /* Just in case you want to see the status bar rotate :) */
+    &.rotate { transform: rotateX(-89deg); }
+}
+
+/* The two faces of the status-bar */
+.disabled-state,
+.enabled-state {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: $status-bar-height;
+    font-size: 13px;
+    color: white;
+}
+
+/* Style the sides */
+.disabled-state {
+    transform: translateZ($status-bar-height/2);
+    background: rgba(black,.3);
+}
+.enabled-state {
+    transform: rotateX(90deg) translateZ($status-bar-height*1.5);
+    background: $g;
+}
+//Styling stuff not needed for demo
+body { text-align: left; }
+.example-cntr {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 50px;    
+    box-shadow: 0 1px 2px rgba(black,.3);
+    background: rgba(black,.15);    
+}
+h1 {
+    text-transform: none;
+    border-bottom: #636363 1px dotted;
+    code {
+        display: inline-block;
+        margin-bottom: 10px;
+        color: $y;
+        background: none;
+        box-shadow: none;
+    }
+}
+code { font-size: 1em; }
+
+input {
+    display: inline-block;
+    width: 30px; height: 30px;
+    margin-bottom: 5px;
+    vertical-align: middle;
+    outline: none;
+    font-size: 18px;
+}
+input, label { cursor: pointer; }
+input[type=text],
+input[type=email] { width: 100%; height: 30px; }
+textarea {
+    width: 100%;
+    height: 50px;
+}
+label {
+    padding: 3px 8px 5px;
+    border-radius: 2px;
+    border: transparent 1px solid;    
+    transition: .5s;
+    &:hover {
+        border: rgba(white,.2) 1px solid;        
+    }
+}
+h3 {
+    font-family: Georgia;
+    font-style: italic;
+}
+.example-cntr {
+    margin-bottom: 50px;
+    padding: 10px;    
+    box-shadow: 0 1px 2px rgba(black,.3);
+    background: rgba(black,.15);
+}
+.flex-ctnr {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+small {
+    display: block;
+    margin: 20px 0 10px;
+    padding-top: 10px;    
+    text-align: center;
+}
+.notes {
+    display: table;
+    margin: auto;
+    padding: 10px 30px;
+    background: rgba(lighten($y,10),.1);
+}
+
+
 </style>
 <html>
   <head>
@@ -172,7 +318,7 @@ we want to make you the leader of your nieche and make sure your company remains
 <input id="btnControl" class="" style="display: none;" type="checkbox" />
 <label class="" for="btnControl"><img id="btnLeft" src="https://placekitten.com/200/140" /><u class="hover-highlight-animation">HMMMMMMM</u></label>
 
-<a class="hover-highlight-animation" href="instagram.com" target="_blank">AAAAAAAAAAAAAAAAAAAAAAAAA</a>
+<a class="hover-highlight-animation" href="#" target="_self">AAAAAAAAAAAAAAAAAAAAAAAAA</a>
 <script>
 $( ".eael-accordion-tab-title" ).click(function() { ani();
 });
@@ -188,7 +334,67 @@ $("#mhigh").removeClass("hover-highlight-animation");
 document.getElementById('mhigh').className = 'hover-highlight-animation';
 }
 }
+
+
+
+$(".enabled input, .enabled textarea").not(".toggle").after("<div class='status-bar'> <div class='disabled-state'>Option disabled :(</div> <div class='enabled-state'>Option enabled! :}</div> </div>");
+
+//Click the button to add classes and trigger CSS animations
+$(".toggle").one("click", function(){
+    //Add class .rotate to the message
+    $(".status-bar").addClass("rotate");
+    //Remove the attribute 'disabled'
+    $(this).parents().find("input, textarea").not(".toggle").toggleAttr("disabled");
+});
+
+//toggleAttr() jQuery plugin - https://gist.github.com/mathiasbynens/298591
+jQuery.fn.toggleAttr = function(attr) {
+ return this.each(function() {
+  var $this = $(this);
+  $this.attr(attr) ? $this.removeAttr(attr) : $this.attr(attr, attr);
+ });
+};
+
+
 </script>
+
+
+
+<!-- :enabled -->
+<section class="example-cntr enabled">
+    <h1>CSS <code>:enabled</code> pseudo-class</h1>
+    <p>All form elements are enabled by default, that is, until we add the attribute <code>disabled</code> to the element in the markup.</p>
+    <p>Using a combination of <code>:enabled</code> and <code>:disabled</code> we can improve the UX with visual feedback.</p>
+    <section class="notes">
+        <h3>Notes:</h3>
+        <ul>
+            <li>Press the “Run” button on top to reset the inputs. Refresh browser too</li>
+            <li>The labels turn on hover, but that’s only for demostration purposes :]</li>
+        </ul>
+    </section>
+    <div class="flex-ctnr">
+        <label class="control">
+            <h4>Click to enable form elements:</h4>
+            <button class="toggle"></button>
+        </label>
+        <div>
+            <h3>Text Field</h3>
+            <input type="text" disabled>
+        </div>
+        <div>
+            <h3>Radio Button</h3>
+            <input type="radio" disabled>
+        </div>
+        <div>
+            <h3>Check Box</h3>
+            <input type="checkbox" disabled>
+        </div>
+        <div>
+            <h3>Text Area</h3>
+            <textarea cols="30" rows="10" disabled></textarea>
+        </div>  
+    </div>    
+</section>
 </body>
 </html>
 
