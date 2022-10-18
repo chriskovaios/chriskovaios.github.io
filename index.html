@@ -1,4 +1,158 @@
 <!DOCTYPE html>
+<script>
+
+    function ani() {
+    document.getElementById('mhigh').className = 'hover-highlight-animation';
+    }
+    
+    
+    function myFunction10() {
+  var x = getElementById("amission");
+  //var y = getElementById("accordionc");
+  //var d1 = document.getElementById("hide2");
+  x.getAttribute('onclick') = none;
+  //var d2 = document.getElementById("hide3");
+  //var a1 = document.getElementById("arrow1");
+  //var a2 = document.getElementById("arrow2");
+  //var a3 = document.getElementById("arrow3");
+  x.addEventListener("click", function(){
+      // Your code 
+      x.style.display = "none";
+      }); 
+	/*
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    d1.style.display = "none";
+    d2.style.display = "none";
+    a2.style.display = "none";
+    a3.style.display = "none";
+    a1.style.display = "inline-block";
+  } else {
+    x.style.display = "none";
+    a1.style.display = "none";
+  }
+}
+*/
+</script>
+
+<style>
+u.lul {
+  color: #000000;
+  text-decoration: none;
+  background-image: linear-gradient(#000000, #000000),
+    linear-gradient(#ffffff, #ffffff),
+    linear-gradient(#000000, #000000);
+  background-size: 0px 2px, 100% 2px, 0 2px;
+  background-position: calc(20px * -1) 100%, 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 2s linear, background-position 2s linear;
+}
+
+u.lul:hover {
+  background-size: 20% 2px, 0 2px, 100% 2px;
+  background-position: calc(100% + 20%) 100%, 0% 100%, 0 100%;
+  background-color: #f4f4f4;
+  /*opacity: 0.3;*/
+}
+
+u.lul:active {
+  background-size: 20% 2px, 0 2px, 100% 2px;
+  background-position: calc(100% + 20%) 100%, 0% 100%, 0 100%;
+}
+/*
+a.lul {
+  color: #ffffff;
+  text-decoration: none;
+  background-image: linear-gradient(#000000, #000000),
+    linear-gradient(#ffffff, #ffffff),
+    linear-gradient(#000000, #000000);
+  background-size: 0px 2px, 100% 2px, 0 2px;
+  background-position: calc(20px * -1) 100%, 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 2s linear, background-position 2s linear;
+}
+
+a.lul:hover {
+  background-size: 20% 2px, 0 2px, 100% 2px;
+  background-position: calc(100% + 20%) 100%, 0% 100%, 0 100%;
+}
+
+a.lul:active, a.lul:focus {
+  background-size: 20% 2px, 0 2px, 100% 2px;
+  background-position: calc(100% + 20%) 100%, 0% 100%, 0 100%;
+}
+*/
+a:active, a:focus{
+        outline: none;
+    }
+    
+    
+.w3rcontainer{
+   border: 1px solid #ffffff;
+   border-radius: 2px;
+} 
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #000000;
+  text-decoration-color: white;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  transform-origin: bottom right;
+  transition: transform 0.42s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/*custom highlight*/
+
+.hover-highlight-animation {
+  display: inline-block;
+  position: relative;
+  color: #000000;
+  text-decoration-color: white;
+}
+
+.hover-highlight-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(251,247,25,0.42);
+  transform-origin: bottom right;
+  transition: transform 0.942s ease-out;
+}
+
+.hover-highlight-animation:checked:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+#btnControl {
+    display: none;
+}
+
+#btnControl:checked + label > img {
+    width: 70px;
+    height: 74px;
+}
+</style>
 <html>
   <head>
     <title> chriskovaios.github.io </title>
@@ -7,5 +161,32 @@
 <h1>Hello World</h1>
 <p>I'm hosted with GitHub Pages.</p>
 <div style="text-align:center;"> Time to build it with HTML, php not supported </div>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>Our mission is to put you in front of every potential client,
+<u id="mhigh" class="">and deliver the WOW factor through our services.</u>
+Keeping up with the social media techniques, and constantly changing algorithms,
+we want to make you the leader of your nieche and make sure your company remains competitive now and in the future.
+
+<input id="miss" class="hover-highlight-animation" type="checkbox" />
+<label class="hover-highlight-animation" for="miss"><u class="hover-highlight-animation">EWWWWWWWWWWW</u></label>
+
+<input id="btnControl" class="" style="display: none;" type="checkbox" />
+<label class="" for="btnControl"><img id="btnLeft" src="https://placekitten.com/200/140" /><u class="hover-highlight-animation">HMMMMMMM</u></label>
+<script>
+$( ".eael-accordion-tab-title" ).click(function() { ani();
+});
+
+function ani() {
+//document.getElementById('mhigh').className = //'hover-highlight-animation';
+//}
+if($("#amission").hasClass("active")) {
+$("#mhigh").addClass("hover-highlight-animation");
+document.getElementById('mhigh').className = '';
+}else{
+$("#mhigh").removeClass("hover-highlight-animation");
+document.getElementById('mhigh').className = 'hover-highlight-animation';
+}
+}
+</script>
 </body>
 </html>
+
