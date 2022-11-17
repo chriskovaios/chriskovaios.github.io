@@ -1,9 +1,11 @@
 /* hero background image */
 .bgimage {
     height:100vh;
-    background: url('images/painter.png');
+    background: url('images/imagebg.webp');
     background-size:cover;
+	background-position:bottom;
     position:relative;
+	//opacity:0.1;
 }
 /* text css above hero image*/
 .hero_title {
