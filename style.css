@@ -3,7 +3,9 @@
     height:100vh;
     background: url('images/imagebg.webp');
     background-size:cover;
-	background-position:bottom;
+	background-color:black;
+	background-position:center -240px;
+	background-repeat:no-repeat;
     position:relative;
 	//opacity:0.1;
 }
