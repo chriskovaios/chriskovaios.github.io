@@ -2,11 +2,20 @@
 .bgimage {
     height:100vh;
     background: url('images/imagebg.webp');
-    background-size:cover;
+    //background-size:cover;
 	background-color:black;
 	background-position:center -240px;
 	background-repeat:no-repeat;
     position:relative;
+	
+	-webkit-background-size: 100%; 
+	-moz-background-size: 100%; 
+	-o-background-size: 100%; 
+	background-size: 100%; 
+	-webkit-background-size: cover; 
+	-moz-background-size: cover; 
+	-o-background-size: cover; 
+	background-size: cover;
 	//opacity:0.1;
 }
 /* text css above hero image*/
