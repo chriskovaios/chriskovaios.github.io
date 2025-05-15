@@ -1,0 +1,16 @@
+{
+    "social": [
+        {
+            "network" : "linkedin",
+            "href": "https://www.linkedin.com/in/chris-koveos-74913721b"
+        },
+        {
+            "network" : "github",
+            "href": "https://github.com/chriskovaios"
+        },
+        {
+            "network" : "email",
+            "href": "mailto:chriskoveos@hotmail.com"
+        }
+    ]
+}

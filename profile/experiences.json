@@ -1,0 +1,63 @@
+{
+    "experiences": [
+        {
+            "title": "Junior Full-Stack Developer",
+            "subtitle": "Netlink S.A.",
+            "workType": "Full-time",
+            "workDescription": [
+                "**Delphi 7 & third-party components.** Full-Stack Developer & Maintainance of legacy systems",
+                "SQL Developer / Data Operations Specialist / Data Engineering Assistant **InterBase** & **PostgreSQL** Maintainance & Store Procedure Developing, as well as **InterBase-to-PostgreSQL migration**",
+                "**.NET 4.5 & third-party components** Maintainance of legacy systems",
+                "Data Management through **day-to-day tasks**",
+                "Developed some automation utilities with **Delphi 7** & **Python**."
+            ],
+            "dateText": "01/2024 – Present"
+        },
+        {
+            "title": "Computer Science",
+            "subtitle": "Unipi University",
+            "workType": "",
+            "workDescription": [
+                "**Thesis**: Development of an interactive website with geolocations for pet owners with the use of **MERN(Mongo, Express, React, Node)**.",
+                "Creating an app for the management of Cinema Theater auditoriums with the use of **C# (Visual Studio)**.",
+                "Static Websites Creation with **HTML, CSS, Javascript, php**.",
+                "Website Development with CMS (**Drupal**)",
+                "Implementation of the Tower of Hanoi problem solution using **Prolog** and **C**",
+                "Development of a Generic Planner for the solving of 2 problems with the same source code (WaterJug & BlocksWorld), with the use of **Python 3.8** and the IDE **Spyder** (**Anaconda3**)",
+                "Development of a custom videogame with the use of template in **Unity3D** (3DGameKit)"
+            ],
+            "dateText": "01/2014 – 05/2025"
+        },
+        {
+            "title": "Volunteer",
+            "subtitle": "Unique Minds",
+            "workType": "Academic Orientation",
+            "workDescription": [
+                "Member of the **Workshop** team for Computer Science. _(2017-2018)_",
+                "Member of the **Open Dialogue** team for Computer Science. _(2018-2019)_",
+                "**Project manager** of the **NTUA** conference. _(2019-2020)_"
+            ],
+            "dateText": "2017 – 2020"
+        },
+        {
+            "title": "Freelancher",
+            "subtitle": "Custom Sites",
+            "workType": "Templates",
+            "workDescription": [
+                "Static Websites Development with **HTML, CSS, Javascript, php**.",
+                "Full-Stack Building / Maintaining / Manage Websites & Online Shops with the use of CMS (**WordPress, OpenCart & third-party components**)"
+            ],
+            "dateText": "01/2014 – 01/2024"
+        },
+        {
+            "title": "Web Developer",
+            "subtitle": "Galex",
+            "workType": "Full Stack",
+            "workDescription": [
+                "Full-Stack Building / Maintaining / Manage Websites & Online Shops with the use of CMS (**WordPress, OpenCart & third-party components**)",
+                "Static Websites Development with **HTML, CSS, Javascript, php**."
+            ],
+            "dateText": "03/2020 – 09/2020"
+        }
+    ]
+}

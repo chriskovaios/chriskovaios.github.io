@@ -1,0 +1,22 @@
+{
+    "education":[
+        {
+            "title": "May 2025",
+            "cardTitle": "Computer Science",
+            "cardSubtitle":"University of Piraeus",
+            "cardDetailedText": "Bachelor's Degree",
+            "icon" : {
+                "src": "images/education/unipi_logo.png"
+            }
+        },
+        {
+            "title": "17 Sept 2012",
+            "cardTitle": "Foreign Language",
+            "cardSubtitle":"Certificate of Proficiency in English",
+            "cardDetailedText": "University of Michigan",
+            "icon" : {
+                "src": "images/education/michigan_logo.png"
+            }
+        }
+    ]
+}
