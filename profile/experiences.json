@@ -1,7 +1,7 @@
 {
     "experiences": [
         {
-            "title": "Junior Full-Stack Developer",
+            "title": "Full-Stack Developer",
             "subtitle": "Netlink S.A.",
             "workType": "Full-time",
             "workDescription": [
@@ -16,7 +16,7 @@
         {
             "title": "Computer Science",
             "subtitle": "Unipi University",
-            "workType": "",
+            "workType": "Student",
             "workDescription": [
                 "**Thesis**: Development of an interactive website with geolocations for pet owners with the use of **MERN(Mongo, Express, React, Node)**.",
                 "Creating an app for the management of Cinema Theater auditoriums with the use of **C# (Visual Studio)**.",
@@ -26,7 +26,7 @@
                 "Development of a Generic Planner for the solving of 2 problems with the same source code (WaterJug & BlocksWorld), with the use of **Python 3.8** and the IDE **Spyder** (**Anaconda3**)",
                 "Development of a custom videogame with the use of template in **Unity3D** (3DGameKit)"
             ],
-            "dateText": "01/2014 – 05/2025"
+            "dateText": "05/2025"
         },
         {
             "title": "Volunteer",
@@ -41,18 +41,30 @@
         },
         {
             "title": "Freelancer",
-            "subtitle": "Custom Sites",
-            "workType": "Templates",
+            "subtitle": "Custom Sites & Apps",
+            "workType": "Part-time",
             "workDescription": [
                 "Static Websites Development with **HTML, CSS, Javascript, php**.",
-                "Full-Stack Building / Maintaining / Manage Websites & Online Shops with the use of CMS (**WordPress, OpenCart & third-party components**)"
+                "Full-Stack Building / Maintaining / Manage Websites & Online Shops with the use of CMS (**WordPress, OpenCart & third-party components**), both custom and pre-made templates.",
+                "Full-Stack Development of Web Applications with the use of **MERN(Mongo, Express, React, Node)** stack."
             ],
-            "dateText": "01/2014 – 01/2024"
+            "dateText": "01/2014 – Present"
+        },
+        {
+            "title": "Customer Support",
+            "subtitle": "Databank",
+            "workType": "Full-time",
+            "workDescription": [
+                "1st Level Support for various projects (Like SME Digital Transformation & Personal Assistant services of _gov.gr_).",
+                "Full-Stack  Maintaining / Manage Websites with the use of CMS (**WordPress, OpenCart & third-party components**)",
+                "Static Websites Development with **HTML, CSS, Javascript, php**."
+            ],
+            "dateText": "07/2022 – 01/2024"
         },
         {
             "title": "Web Developer",
             "subtitle": "Galex",
-            "workType": "Full Stack",
+            "workType": "Part-time",
             "workDescription": [
                 "Full-Stack Building / Maintaining / Manage Websites & Online Shops with the use of CMS (**WordPress, OpenCart & third-party components**)",
                 "Static Websites Development with **HTML, CSS, Javascript, php**."

@@ -26,6 +26,10 @@
             "href": "/experience"
         },
         {
+            "title": "Projects",
+            "href": "/projects"
+        },
+        {
             "title": "Resume",
             "href": "/documents/resume.pdf",
             "type": "link"
